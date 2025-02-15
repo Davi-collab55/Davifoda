@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tube</title>
+    <link rel="stylesheet" href="stilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Faça o cadastro</h1>
+        <br><br>
+
+        <input type="email" id="em" placeholder="Digite seu email">
+        <br><br>
+
+        <input type="password" id="sn" placeholder="Digite sua senha">
+        <br><br>
+
+        <button id="bt">Enviar</button>
+        <p id="er"></p>
+    </div>
+
+    <script src="style.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("bt").addEventListener("click", function() {
+                let mail = document.getElementById("em").value;
+                let snha = document.getElementById("sn").value;
+                let ms = document.getElementById("er");
+
+                if(mail && snha) {
+                    window.open("https://www.youtube.com/results?search_query=como+fazer+um+site+com+javascript", '_blank');
+                } else {
+                    ms.style.color = "red";
+                    ms.innerHTML = "Por favor, preencha os campos";
+
+                    setTimeout(() => {
+                        ms.innerHTML = "";
+                    }, 3000);
+                }
+            });
+        });
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(https://images.pexels.com/photos/358532/pexels-photo-358532.jpeg?auto=compress&cs=tinysrgb&w=600);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            position: absolute;
+            top: 28%;
+            transform: translateX(-2%);
+        }
+
+        #em, #sn, #bt {
+            position: absolute;
+            width: 200px;
+            border-radius: 8px;
+            height: 30px;
+            padding: 2px;
+        }
+
+        #em {
+            top: 38%;
+            border: 2px solid rgb(182, 180, 177);
+        }
+
+        #sn {
+            top: 46%;
+            border: 2px solid rgb(182, 180, 177);
+        }
+
+        #bt {
+            top: 55%;
+            border: 1px solid rgb(0, 0, 0);
+            background-color: rgb(17, 68, 221);
+            color: white;
+        }
+
+        #bt:hover {
+            box-shadow: 2px 2px rgb(0, 0, 0);
+        }
+
+        .container {
+            width: 300px;
+            height: 200px;
+            background-color: rgba(233, 234, 236, 0.732);
+            border: 3px solid rgba(29, 29, 29, 0.764);
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        p {
+            position: absolute;
+            top: 65%;
+            transform: translateX(-2%);
+        }
+    </style>
+</body>
+</html>
